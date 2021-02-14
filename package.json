@@ -1,0 +1,7 @@
+{
+    "name": "wishbone-pwa",
+    "version": "2021.2.14",
+    "description": "Wish Bone Canine Rescue Progressive Web App",
+    "main": "index.js",
+    "author": "Bryon Nicoson"
+}

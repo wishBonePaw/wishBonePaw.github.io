@@ -16,54 +16,57 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css"
+    />
     <link rel="stylesheet" href="/src/css/app.css" />
   </head>
   <body>
-      <div id="app">
-          <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-              <header class="mdl-layout__header">
-                  <div class="mdl-layout_header-row">
-                      <!-- Title -->
-                      <span class="mdl-layout-title">Wish Bone Canine Rescue</span>
-                      <!-- Spacer (to right align navigation) -->
-                      <div class="mdl-layout-spacer"></div>
-                      <!-- Navigation -->
-                      <nav class="mdl-navigation mdl-layout--large-screen-only">
-                          <a class="mdl-navigation__link" href="/">Our Dogs</a>
-                          <a class="mdl-navigation__link" href="/">Events</a>
-                          <a class="mdl-navigation__link" href="/">Get Involved</a>
-                          <a class="mdl-navigation__link" href="/">About Us</a>
-                          <div class="drawer-option">
-                              <button class="enable-notifications mdl-button mdl-js-button mdl-button--raised mdl-button-colored mdl-color--accent">
-                                  Enable Notifications
-                              </button>
-                          </div>
-                      </nav>
-                  </div>
-              </header>
-              <div class="mdl-layout__drawer">
-                  <span class="mdl-layout-title">Wish Bone Canine Rescue</span>
-                  <nav class="mdl-navigation">
-                      <a class="mdl-navigation__link" href="/">Our Dogs</a>
-                      <a class="mdl-navigation__link" href="/">Events</a>
-                      <a class="mdl-navigation__link" href="/">Get Involved</a>
-                      <a class="mdl-navigation__link" href="/">About Us</a>
-                      <div class="drawer-option">
-                          <button class="enable-notifications mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color-accent">
-                              Enable Notifications
-                          </button>
-                      </div>
-                  </nav>
+    <div id="app">
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+          <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">PWAGram</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+              <a class="mdl-navigation__link" href="/">Feed</a>
+              <a class="mdl-navigation__link" href="/help">Help</a>
+              <div class="drawer-option">
+                <button
+                  class="enable-notifications mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent"
+                >
+                  Enable Notifications
+                </button>
               </div>
-              <main class="mdl-layout__content mat-typography">
-                  <!-- dynamic content area -->
-                  <div class="mdl-snackbar__text"></div>
-              </main>
+            </nav>
           </div>
+        </header>
+        <div class="mdl-layout__drawer">
+          <span class="mdl-layout-title">PWAGram</span>
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="/">Feed</a>
+            <a class="mdl-navigation__link" href="/help">Help</a>
+            <div class="drawer-option">
+              <button
+                class="enable-notifications mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent"
+              >
+                Enable Notifications
+              </button>
+            </div>
+          </nav>
+        </div>
+        <main class="mdl-layout__content mat-typography">
+          <!-- dynamic content area -->
+          <div class="mdl-snackbar__text"></div>
+        </main>
       </div>
-      <script defer src="/src/js/material.min.js"></script>
-      <script src="/src/js/app.js"></script>
-      <script src="/src/js/fetch.js"></script>
+    </div>
+    <script defer src="/src/js/material.min.js"></script>
+    <script src="/src/js/app.js"></script>
+    <script src="/src/js/fetch.js"></script>
   </body>
 </html>

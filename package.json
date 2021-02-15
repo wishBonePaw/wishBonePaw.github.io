@@ -3,5 +3,8 @@
     "version": "2021.2.14",
     "description": "Wish Bone Canine Rescue Progressive Web App",
     "main": "index.js",
-    "author": "Bryon Nicoson"
+    "author": "Bryon Nicoson",
+    "dependencies": {
+        "@petfinder/petfinder-js": "^1.0.6"
+    }
 }

@@ -4,7 +4,7 @@ var petfinder = require("@petfinder/petfinder-js");
 var client = new petfinder.Client({ apiKey: apiKey, secret: apiSecret });
 
 client.animal
-  .search("?organization_id=IL542")
+  .search()
   .then(function (response) {
     const data = response.data;
     document.getElementById("json").textContent = JSON.stringify(data);

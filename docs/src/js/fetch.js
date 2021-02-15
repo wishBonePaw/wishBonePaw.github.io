@@ -6,7 +6,8 @@ var client = new petfinder.Client({ apiKey: apiKey, secret: apiSecret });
 client.animal
   .search("?organization_id=IL542")
   .then(function (response) {
-    document.getElementById("json").textContent = JSON.stringify(response);
+    const data = response.data;
+    document.getElementById("json").textContent = JSON.stringify(data);
   })
   .catch(function (error) {
     document.getElementById("error").textContent = JSON.stringify(error);

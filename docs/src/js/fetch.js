@@ -5,7 +5,7 @@ const orgId = "IL542";
 var client = new petfinder.Client({ apiKey: apiKey, secret: apiSecret });
 
 client.animal
-  .search({ organization_id : orgId })
+  .search({ organization: orgId })
   .then(function (response) {
     const data = response.data;
     document.getElementById("json").textContent = JSON.stringify(data);

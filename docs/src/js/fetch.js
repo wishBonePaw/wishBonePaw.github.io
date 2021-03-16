@@ -9,7 +9,7 @@ client.animal
   .then(function (response) {
     const data = response.data;
     
-    document.getElementById("json").textContet = JSON.stringify(data);
+    document.getElementById("json").textContent = JSON.stringify(data);
   
     var s = $("#dogTemplate")[0].innerHTML.trim();
     var holder = document.createElement('div);

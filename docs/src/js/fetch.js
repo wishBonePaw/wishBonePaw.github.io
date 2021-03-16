@@ -9,6 +9,8 @@ client.animal
   .then(function (response) {
     const data = response.data.animals;
     
+    document.getElementById("ourdogs").textContet = JSON.stringify(data);
+  
     var s = $("#dogTemplate")[0].innerHTML.trim();
     var holder = document.createElement('div);
     holder.innerHTML = s;

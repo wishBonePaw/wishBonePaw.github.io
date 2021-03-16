@@ -9,11 +9,12 @@ fetch('mockdata.json')
 
 function appendData(data) {
   var mainContainer = document.getElementById("ourdogs");
-  for (var i = 0; i < data.animals.length; i++) {
-    var div = document.createElement("div");
-    div.innerHtml = data.animals[i].name;
-    mainContainer.appendChild(div);
-  }
+  mainContainer.textContent = JSON.stringify(data);
+//   for (var i = 0; i < data.animals.length; i++) {
+//     var div = document.createElement("div");
+//     div.innerHtml = data.animals[i].name;
+//     mainContainer.appendChild(div);
+//   }
 }
 
 // function readJsonFile(file, callback) {

@@ -12,7 +12,7 @@ client.animal
    // document.getElementById("json").textContent = JSON.stringify(data);
     data.forEach(function(dog) {
       document.getElementById("json").textContent.append(dog.name);
-  
+    }
 //     var s = $("#dogTemplate")[0].innerHTML.trim();
 //     var holder = document.createElement('div);
 //     holder.innerHTML = s;

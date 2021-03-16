@@ -1,7 +1,16 @@
-var fr = new FileReader();
-fr.onload = function(){
-
-  fr.readAsText(./mockdata.json).then(
-  document.getElementById('json').textContent = fr.result;
-    )
+function readJsonFile(file, callback) {
+  var rawFile = new XMLHttpRequest();
+  rawFile.overrideMimeType("application/json");
+  rawFile.open("GET", file, true);
+  rawFile.onreadystatechange = function() {
+    if (rawFile.readyState === 4 && rawFile.status == "200") {
+      callback(rawFile.responseText);
+    }
+  }
+  rawFile.send(null);
 }
+
+readJsonFile("./mockdata.json", function(text){
+  var data = JSON.parse(text);
+  document.getElementById("json").textContent = data;
+});

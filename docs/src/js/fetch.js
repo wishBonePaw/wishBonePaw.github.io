@@ -7,7 +7,7 @@ var client = new petfinder.Client({ apiKey: apiKey, secret: apiSecret });
 client.animal
   .search({ organization: orgId })
   .then(function (response) {
-    const data = response.data.animals;
+    const data = response.data;
     
     document.getElementById("json").textContet = JSON.stringify(data);
   

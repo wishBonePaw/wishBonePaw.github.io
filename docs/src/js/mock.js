@@ -12,5 +12,5 @@ function readJsonFile(file, callback) {
 
 readJsonFile("./mockdata.json", function(text){
   var data = JSON.parse(text);
-  document.getElementById("json").textContent = data;
+  document.getElementById("json").textContent = JSON.stringify(data);
 });

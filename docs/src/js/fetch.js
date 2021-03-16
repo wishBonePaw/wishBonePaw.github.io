@@ -9,7 +9,7 @@ client.animal
   .then(function (response) {
     const data = response.data.animals;
     
-    document.getElementById("ourdogs").textContet = JSON.stringify(data);
+    document.getElementById("json").textContet = JSON.stringify(data);
   
     var s = $("#dogTemplate")[0].innerHTML.trim();
     var holder = document.createElement('div);
@@ -29,7 +29,7 @@ client.animal
       //append it
       $(".ourdogs").append(newItem);
     }
-    //document.getElementById("json").textContent = JSON.stringify(data);
+
   })
   .catch(function (error) {
     document.getElementById("error").textContent = JSON.stringify(error);

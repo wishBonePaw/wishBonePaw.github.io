@@ -1,6 +1,5 @@
 fetch('mockdata.json')
   .then(function (response) {
-  return response.json();
 }).then(function (data) {
   appendData(data);
 }).catch(function (error) {
@@ -10,26 +9,4 @@ fetch('mockdata.json')
 function appendData(data) {
   var mainContainer = document.getElementById("ourdogs");
   mainContainer.textContent = JSON.stringify(data);
-//   for (var i = 0; i < data.animals.length; i++) {
-//     var div = document.createElement("div");
-//     div.innerHtml = data.animals[i].name;
-//     mainContainer.appendChild(div);
-//   }
 }
-
-// function readJsonFile(file, callback) {
-//   var rawFile = new XMLHttpRequest();
-//   rawFile.overrideMimeType("application/json");
-//   rawFile.open("GET", file, true);
-//   rawFile.onreadystatechange = function() {
-//     if (rawFile.readyState === 4 && rawFile.status == "200") {
-//       callback(rawFile.responseText);
-//     }
-//   }
-//   rawFile.send(null);
-// }
-
-// readJsonFile("./mockdata.json", function(text){
-//   var data = JSON.parse(text);
-//   document.getElementById("json").textContent = JSON.stringify(data);
-// });

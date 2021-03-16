@@ -7,14 +7,10 @@ var client = new petfinder.Client({ apiKey: apiKey, secret: apiSecret });
 client.animal
   .search({ organization: orgId })
   .then(function (response) {
-    const data = response.data.animals;
+    const data = response.data;
     
-   // document.getElementById("json").textContent = JSON.stringify(data);
-        var test = document.getElementById("json");
-    data.forEach(function(dog) {
+document.getElementById("json").textContent = JSON.stringify(data);
 
-      test.textContent = test + " " + dog.name;
-    }
 //     var s = $("#dogTemplate")[0].innerHTML.trim();
 //     var holder = document.createElement('div);
 //     holder.innerHTML = s;

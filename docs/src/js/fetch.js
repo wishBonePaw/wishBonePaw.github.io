@@ -11,24 +11,24 @@ client.animal
     
     document.getElementById("json").textContent = JSON.stringify(data);
   
-    var s = $("#dogTemplate")[0].innerHTML.trim();
-    var holder = document.createElement('div);
-    holder.innerHTML = s;
-    var template = holder.childNodes;
-    var dog = document.getElementById('ourdogs');
-    data.forEach(function(object) {
+//     var s = $("#dogTemplate")[0].innerHTML.trim();
+//     var holder = document.createElement('div);
+//     holder.innerHTML = s;
+//     var template = holder.childNodes;
+//     var dog = document.getElementById('ourdogs');
+//     data.forEach(function(object) {
      
-      //clone template
-      var newItem = $(template).clone();
+//       //clone template
+//       var newItem = $(template).clone();
       
-      //populate it
-      var img = $(newItem).find(".thumb")
-      $(img).attr("src", object.photos[0]).attr("alt", $(img).attr("alt") + object.name);
-      $(newItem).find(".dogname").html(object.name);
+//       //populate it
+//       var img = $(newItem).find(".thumb")
+//       $(img).attr("src", object.photos[0]).attr("alt", $(img).attr("alt") + object.name);
+//       $(newItem).find(".dogname").html(object.name);
       
-      //append it
-      $(".ourdogs").append(newItem);
-    }
+//       //append it
+//       $(".ourdogs").append(newItem);
+//     }
 
   })
   .catch(function (error) {

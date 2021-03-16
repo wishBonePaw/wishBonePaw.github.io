@@ -9,7 +9,7 @@ client.animal
   .then(function (response) {
     const data = response.data.animals;
     
-    document.getElementById("json").textContent = JSON.stringify(data);
+   // document.getElementById("json").textContent = JSON.stringify(data);
     data.forEach(function(dog) {
       document.getElementById("json").textContent.append(dog.name);
   

@@ -11,7 +11,7 @@ function appendData(data) {
   var mainContainer = document.getElementById("ourdogs");
   for (var i = 0; i < data.length; i++) {
     var div = document.createElement("div");
-    div.innerHtml = data[i].name;
+    div.innerHtml = data.animals[i].name;
     mainContainer.appendChild(div);
   }
 }

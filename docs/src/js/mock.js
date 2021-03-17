@@ -8,5 +8,5 @@ fetch('/src/js/mockdata.json')
 
 function appendData(data) {
   var mainContainer = document.getElementById("ourdogs");
-  mainContainer.textContent = JSON.parse(data);
+  mainContainer.textContent = JSON.stringify(data);
 }

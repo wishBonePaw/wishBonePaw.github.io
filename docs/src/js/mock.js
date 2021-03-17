@@ -1,4 +1,4 @@
-fetch('mockdata.json')
+fetch('/src/js/mockdata.json')
   .then(function (response) {
 }).then(function (data) {
   appendData(data);

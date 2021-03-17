@@ -1,4 +1,4 @@
-fetch('mockdata.json')
+fetch('https://wishbonepaw.github.io/src/js/mockdata.json')
   .then(function (response) {
     return response.json();
 }).then(function (data) {

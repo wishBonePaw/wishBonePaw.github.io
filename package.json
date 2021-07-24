@@ -1,20 +1,22 @@
 {
-  "name": "pwa-complete-guide",
+  "name": "wishbone-app",
   "version": "1.0.0",
-  "description": "A complete guide to PWAs. Building a simple Instagram clone.",
-  "main": "index.js",
+  "description": "Wish Bone Canine Rescue.",
+  "main": "index.html",
   "scripts": {
-    "start": "http-server -c-1"
+    "start": "http-server ./docs -c-1"
   },
   "keywords": [
-    "pwa",
-    "progressive",
-    "web",
-    "app",
-    "complete",
-    "tutorial"
+    "wish",
+    "bone",
+    "canine",
+    "rescue",
+    "bloomington",
+    "normal",
+    "mclean",
+    "illinois"
   ],
-  "author": "Maximilian Schwarzmüller",
+  "author": "Bryon Nicoson",
   "license": "ISC",
   "devDependencies": {
     "http-server": "^0.12.3"

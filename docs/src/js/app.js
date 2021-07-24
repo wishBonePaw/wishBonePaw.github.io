@@ -1,31 +1,32 @@
 var deferredPrompt;
 
-
 if (!window.Promise) {
   window.Promise = Promise;
 }
 
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/sw.js").then(function () {
-    //console.log("Service worker registered!");
-  })
-  .catch(function(err) {
-    console.log(err);
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/sw.js")
+      .then(function () {})
+      .catch(function (err) {
+        console.log(err);
+      });
   });
 }
 
-window.addEventListener('beforeinstallprompt', function(event) {
-    //console.log('beforeinstallprompt fired');
-    event.preventDefault();
-    deferredPrompt = event;
-    return false;
+window.addEventListener("beforeinstallprompt", function (event) {
+  //console.log('beforeinstallprompt fired');
+  event.preventDefault();
+  deferredPrompt = event;
+  return false;
 });
 
 // var promise = new Promise(function(resolve, reject) {
 //   setTimeout(function() {
 //     resolve('This is executed once the timer is done');
 //     //reject({code: 500, message: 'An error occurred!'});
-//     //console.log('This is executed once the timer is done');   
+//     //console.log('This is executed once the timer is done');
 //     }, 3000);
 // });
 
@@ -77,12 +78,12 @@ window.addEventListener('beforeinstallprompt', function(event) {
 
 // console.log('This is executed right after setTimeout');
 
-
-
 // testing date
 if (!Date.now) {
-  Date.now = function() { return new Date().getTime(); }
+  Date.now = function () {
+    return new Date().getTime();
+  };
 }
 
 var timeStamp = Math.floor(Date.now() / 1000);
-console.log('[TIME]', timeStamp);
+console.log("[TIME]", timeStamp);

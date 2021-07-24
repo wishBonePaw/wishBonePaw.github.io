@@ -1,5 +1,5 @@
 var kennel = document.querySelector("#kennel");
-var count = document.querySelector("#dog_count");
+var counts = document.querySelectorAll("#dog_count");
 
 //---------- testing petfinder
 //todo: obfuscation
@@ -42,7 +42,7 @@ fetch("https://api.petfinder.com/v2/oauth2/token", {
         console.log("[ANIMALS]", data);
         //console.log("[visualViewport.width]", visualViewport.width);
         animals = data.animals;
-        count.innerHTML = animals.length;
+        counts.forEach((count) => (count.innerHTML = animals.length));
         animals.sort(function (a, b) {
           return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
         });

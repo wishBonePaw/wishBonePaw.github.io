@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -7,10 +7,10 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Wish Bone Canine Rescue</title>
+    <title>Help</title>
     <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Francois+One|Oswald"
     />
     <link
       rel="stylesheet"
@@ -20,11 +20,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css"
     />
-    <link rel="stylesheet" href="/src/css/app.css" />
+    <link rel="stylesheet" href="/src/css/help.css" />
     <link rel="manifest" href="/manifest.json" />
+
+    <!-- safari -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="Wish Bone Canine Rescue" />
+    <meta name="apple-mobile-web-app-title" content="Wish Bone" />
     <link
       rel="apple-touch-icon"
       href="/src/images/icons/apple-icon-57x57.png"
@@ -70,12 +72,13 @@
       href="/src/images/icons/apple-icon-180x180.png"
       sizes="180x180"
     />
+    <!-- ie -->
     <meta
       name="msapplication-TileImage"
-      content="/src/images/icons/apple-icon-144x144.png"
+      content="/src/images/icons/app-icon-144x144.png"
     />
     <meta name="msapplication-TileColor" content="#fff" />
-    <meta name="theme-color" content="#462b75" />
+    <meta name="theme-color" content="#3f51b5" />
   </head>
   <body>
     <div id="app">
@@ -83,16 +86,21 @@
         <header class="mdl-layout__header">
           <div class="mdl-layout__header-row">
             <!-- Title -->
-            <span class="mdl-layout-title">Wish Bone Canine Rescue</span>
+            <span class="mdl-layout-title">PWAGram</span>
             <!-- Add spacer, to align navigation to the right -->
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation. We hide it in small screens. -->
             <nav class="mdl-navigation mdl-layout--large-screen-only">
-              <a class="mdl-navigation__link" href="/">Our Dogs</a>
-              <a class="mdl-navigation__link" href="/">Events</a>
+              <a class="mdl-navigation__link" href="/">Feed</a>
+              <a class="mdl-navigation__link" href="/settings">Settings</a>
               <div class="drawer-option">
                 <button
-                  class="enable-notifications mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent"
+                  class="
+                    enable-notifications
+                    mdl-button mdl-js-button
+                    mdl-button--raised mdl-button--colored
+                    mdl-color--accent
+                  "
                 >
                   Enable Notifications
                 </button>
@@ -101,13 +109,18 @@
           </div>
         </header>
         <div class="mdl-layout__drawer">
-          <span class="mdl-layout-title">Wish Bone</span>
+          <span class="mdl-layout-title">PWAGram</span>
           <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="/">Our Dogs</a>
-            <a class="mdl-navigation__link" href="/">Events</a>
+            <a class="mdl-navigation__link" href="/">Feed</a>
+            <a class="mdl-navigation__link" href="/help">Help</a>
             <div class="drawer-option">
               <button
-                class="enable-notifications mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent"
+                class="
+                  enable-notifications
+                  mdl-button mdl-js-button
+                  mdl-button--raised mdl-button--colored
+                  mdl-color--accent
+                "
               >
                 Enable Notifications
               </button>
@@ -115,17 +128,53 @@
           </nav>
         </div>
         <main class="mdl-layout__content mat-typography">
-          <p id="json"></p>
-          <div class="mdl-snackbar__text">
-            <pre id="error"></pre>
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col text-center">
+              <h3>Need Help?</h3>
+              <p>
+                Learn how to use this app and share your amazing memories with
+                all your friends!
+              </p>
+            </div>
+          </div>
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col text-center">
+              <h3>Contact Us!</h3>
+              <div>
+                <button
+                  class="
+                    mdl-button mdl-js-button
+                    mdl-button--fab mdl-button--colored
+                  "
+                >
+                  <i class="material-icons">call</i>
+                </button>
+                <button
+                  class="
+                    mdl-button mdl-js-button
+                    mdl-button--fab mdl-button--colored
+                  "
+                >
+                  <i class="material-icons">email</i>
+                </button>
+                <button
+                  class="
+                    mdl-button mdl-js-button
+                    mdl-button--fab mdl-button--colored
+                  "
+                >
+                  <i class="material-icons">chat_bubble</i>
+                </button>
+              </div>
+            </div>
           </div>
         </main>
       </div>
     </div>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
+
     <script defer src="/src/js/material.min.js"></script>
-    <script src="/src/js/app.js"></script>
+    <script src="/src/js/promise.js"></script>
     <script src="/src/js/fetch.js"></script>
+    <script src="/src/js/app.js"></script>
   </body>
 </html>

@@ -1,10 +1,22 @@
 {
-    "name": "wishbone-pwa",
-    "version": "2021.2.14",
-    "description": "Wish Bone Canine Rescue Progressive Web App",
-    "main": "index.js",
-    "author": "Bryon Nicoson",
-    "dependencies": {
-        "@petfinder/petfinder-js": "^1.0.6"
-    }
+  "name": "pwa-complete-guide",
+  "version": "1.0.0",
+  "description": "A complete guide to PWAs. Building a simple Instagram clone.",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1"
+  },
+  "keywords": [
+    "pwa",
+    "progressive",
+    "web",
+    "app",
+    "complete",
+    "tutorial"
+  ],
+  "author": "Maximilian Schwarzmüller",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
 }

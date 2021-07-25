@@ -80,6 +80,7 @@ function createCard(dog, index, array) {
   var cardTitle = document.createElement("div");
   cardTitle.style.alignmentBaseline = "baseline";
   cardTitle.style.textAlign = "center";
+  cardTitle.style.paddingTop = "5px";
   cardTitle.className = "col mdl-typography--title";
   cardTitle.appendChild(document.createTextNode(dog.name));
 

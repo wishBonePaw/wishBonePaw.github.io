@@ -78,12 +78,4 @@ window.addEventListener("beforeinstallprompt", function (event) {
 
 // console.log('This is executed right after setTimeout');
 
-// testing date
-if (!Date.now) {
-  Date.now = function () {
-    return new Date().getTime();
-  };
-}
 
-var timeStamp = Math.floor(Date.now() / 1000);
-console.log("[TIME]", timeStamp);

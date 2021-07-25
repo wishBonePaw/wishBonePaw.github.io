@@ -40,13 +40,23 @@ fetch("https://api.petfinder.com/v2/oauth2/token", {
       })
       .then(function (data) {
         console.log("[ANIMALS]", data);
-        //console.log("[visualViewport.width]", visualViewport.width);
         animals = data.animals;
         counts.forEach((count) => (count.innerHTML = animals.length));
         animals.sort(function (a, b) {
           return a.name > b.name ? 1 : b.name > a.name ? -1 : 0;
         });
         animals.forEach(createCard);
+
+        // testing date
+        if (!Date.now) {
+          Date.now = function () {
+            return new Date().getTime();
+          };
+        }
+
+        var timeStamp = Math.floor(Date.now() / 1000);
+
+        window.localStorage.setItem("petfinder", timeStamp.toString());
       })
       .catch(function (err) {
         console.log("[ERROR]", err);

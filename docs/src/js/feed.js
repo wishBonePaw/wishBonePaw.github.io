@@ -54,9 +54,18 @@ fetch("https://api.petfinder.com/v2/oauth2/token", {
           };
         }
 
-        var timeStamp = Math.floor(Date.now() / 1000);
+        let now = Math.floor(Date.now() / 1000);
+        let lastUpdate = parseInt(localStorage.getItem("petfinder"));
+        console.log("[LAST UPDATE] " + lastUpdate);
+        console.log("NOW: " + now);
 
-        window.localStorage.setItem("petfinder", timeStamp.toString());
+        if (now > lastUpdate + 60) {
+          console.log("[TIME CHECK] A minute has passed.  Reset the timer.");
+          window.localStorage.setItem("petfinder", now.toString());
+          console.log("[LAST UPDATE] set to " + now);
+        } else {
+          console.log("[TIME CHECK] Too early.");
+        }
       })
       .catch(function (err) {
         console.log("[ERROR]", err);
